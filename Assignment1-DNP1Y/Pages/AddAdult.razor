@@ -1,0 +1,23 @@
+﻿@page "/AddAdult"
+@using Models
+<h3>AddAdult</h3>
+
+<EditForm Model="@addNewAdultItem" OnValidSubmit="@AddAdult1">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">User Id: <br/>
+        <InputNumber @bind-Value="AddAdult1.UserID"/></div>
+  
+
+</EditForm>
+
+
+@code {
+
+    public void AddAdult1()
+    {
+        
+    }
+
+    private Adult addNewAdultItem = new Adult();
+}
